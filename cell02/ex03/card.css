@@ -19,10 +19,13 @@ body {
     text-align: center;
 }
 .card {
-    background: #fff;
+    background: plum;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+}
+.location{
+    color:black;
 }
 .profile-pic {
     width: 100%;
@@ -31,8 +34,9 @@ body {
 .social-icons i{
     width: 24px;
 }
+
 .contact-btn {
-    background: rgb(132, 177, 240);
+    background: rgb(71, 112, 169);
     color: white;
     border: none;
     padding: 10px;
