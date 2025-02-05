@@ -23,6 +23,7 @@ body {
 .username {
     font-size: 24px;
     margin: 10px 0;
+    color: purple;
 }
 .description, .location {
     font-size: 14px;
@@ -32,7 +33,7 @@ body {
     width: 24px;
 }
 .contact-btn {
-    background: rgb(240, 132, 213);
+    background: rgb(132, 177, 240);
     color: white;
     border: none;
     padding: 10px;
