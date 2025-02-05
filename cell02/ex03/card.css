@@ -6,6 +6,15 @@ body {
     height: 100vh;
     background-color: #f4f4f4;
 }
+.username {
+    font-size: 24px;
+    margin: 10px 0;
+    color: purple;
+}
+.description, .location {
+    font-size: 14px;
+    color: #777;
+}
 .profile-card {
     text-align: center;
 }
@@ -18,16 +27,6 @@ body {
 .profile-pic {
     width: 100%;
 
-}
-
-.username {
-    font-size: 24px;
-    margin: 10px 0;
-    color: purple;
-}
-.description, .location {
-    font-size: 14px;
-    color: #777;
 }
 .social-icons i{
     width: 24px;
