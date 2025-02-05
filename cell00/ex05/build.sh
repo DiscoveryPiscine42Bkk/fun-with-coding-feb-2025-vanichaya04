@@ -3,5 +3,5 @@ if [ $# -eq 0 ]; then
 	exit 1
 fi
 	for arg in "$@"; do
-		mkdir -p "ex$arg"
+		mkdir ex$arg
 done
