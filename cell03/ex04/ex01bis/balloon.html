@@ -30,9 +30,7 @@
     </style>
 </head>
 <body>
-
     <div id="balloon">Click me</div>
-
     <script>
         $(document).ready(function() {
             let colors = ["red", "green", "blue"];
@@ -46,21 +44,16 @@
                     "background-color": colors[colorIndex]
                 });
             }
-
             updateBalloon();
-
             $("#balloon").on("click", function() {
                 size += 10;
                 colorIndex = (colorIndex + 1) % colors.length;
-
                 if (size > 420) {
                     size = 200;
                     colorIndex = 0;
                 }
-
                 updateBalloon();
             });
-
             $("#balloon").on("mouseleave", function() {
                 if (size > 200) {
                     size -= 5;
@@ -70,6 +63,5 @@
             });
         });
     </script>
-
 </body>
 </html>

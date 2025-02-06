@@ -14,7 +14,6 @@
             height: 100vh;
             background-color: #f4f4f4;
         }
-
         .container {
             display: flex;
             flex-direction: column;
@@ -26,7 +25,6 @@
             border-radius: 15px;
             padding: 20px;
         }
-
         input,
         select,
         button {
@@ -38,7 +36,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <input type="text" id="left" placeholder="Enter number">
@@ -52,7 +49,6 @@
         <input type="text" id="right" placeholder="Enter a number">
         <input type="submit" value="Try me!" id="butt">
     </div>
-
     <script>
         $(document).ready(function () {
             $("#butt").click(function () {
@@ -66,19 +62,15 @@
                     return /^-?\d+$/.test(value);
                 }
                 console.log(isNumeric(right))
-
                 if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0 || isNumeric(right)==false || isNumeric(left)==false) {
                     alert("Error :(");
                     return;
                 }
-
                 if ((operator === "/" || operator === "%") && num2 === 0) {
                     alert("It's over 9000!");
                     return;
                 }
-
                 let result;
-
                 switch (operator) {
                     case "+": result = num1 + num2; break;
                     case "-": result = num1 - num2; break;
@@ -87,11 +79,9 @@
                     case "%": result = num1 % num2; break;
                     default: result = "Error"; break;
                 }
-
                 alert("Result: " + result);
                 console.log("Result:", result);
             });
-
             setInterval(function () {
                 alert("Please, use me...");
             }, 30000);
