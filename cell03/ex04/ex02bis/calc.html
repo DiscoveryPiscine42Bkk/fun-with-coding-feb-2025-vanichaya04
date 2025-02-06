@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
             display: flex;
@@ -13,6 +14,7 @@
             height: 100vh;
             background-color: #f4f4f4;
         }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -24,7 +26,10 @@
             border-radius: 15px;
             padding: 20px;
         }
-        input, select, button {
+
+        input,
+        select,
+        button {
             margin: 10px;
             padding: 10px;
             font-size: 16px;
@@ -33,6 +38,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <input type="text" id="left" placeholder="Enter number">
@@ -48,15 +54,20 @@
     </div>
 
     <script>
-        $(document).ready(function() {
-            $("#butt").click(function() {
-                let left = $("#left").val(); 
-                let operator = $("#operator").val(); 
-                let right = $("#right").val(); 
+        $(document).ready(function () {
+            $("#butt").click(function () {
+                let left = $("#left").val();
+                let operator = $("#operator").val();
+                let right = $("#right").val();
                 let num1 = parseFloat(left);
                 let num2 = parseFloat(right);
 
-                if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
+                function isNumeric(value) {
+                    return /^-?\d+$/.test(value);
+                }
+                console.log(isNumeric(right))
+
+                if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0 || isNumeric(right)==false || isNumeric(left)==false) {
                     alert("Error :(");
                     return;
                 }
@@ -81,10 +92,11 @@
                 console.log("Result:", result);
             });
 
-            setInterval(function() {
+            setInterval(function () {
                 alert("Please, use me...");
             }, 30000);
         });
     </script>
 </body>
+
 </html>
