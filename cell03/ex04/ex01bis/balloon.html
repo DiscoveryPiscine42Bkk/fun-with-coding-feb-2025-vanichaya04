@@ -37,7 +37,6 @@
         $(document).ready(function() {
             let colors = ["red", "green", "blue"];
             
-            // โหลดค่าที่เก็บไว้จาก localStorage
             let size = localStorage.getItem("balloonSize") ? parseInt(localStorage.getItem("balloonSize")) : 200;
             let colorIndex = localStorage.getItem("balloonColorIndex") ? parseInt(localStorage.getItem("balloonColorIndex")) : 0;
 
@@ -48,12 +47,11 @@
                     "background-color": colors[colorIndex]
                 });
 
-                // บันทึกค่าใหม่ลงใน localStorage
                 localStorage.setItem("balloonSize", size);
                 localStorage.setItem("balloonColorIndex", colorIndex);
             }
 
-            // อัปเดตบอลลูนตอนโหลดหน้าเว็บ
+
             updateBalloon();
 
             $("#balloon").on("click", function() {
