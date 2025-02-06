@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Background Color</title>
+    <title>Change Background</title>
     <link rel="stylesheet" href="backgroound.css">
 </head>
 <body>
-    <button onclick="toggleBackgroundColor()">Click Me!</button>
+    <button class="change-bg-btn" onclick="changeBackground()">Change Background Color</button>
     <script>
-        let isGreen = false;
-        function toggleBackgroundColor() {
-            document.body.style.backgroundColor = isGreen ? 'red' : 'green';
-            isGreen = !isGreen;
+        function changeBackground() {
+            const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            document.body.style.backgroundColor = randomColor;
         }
     </script>
 </body>
