@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
-        body{
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,7 +22,6 @@
             background-color: palevioletred;
             border-radius: 15px;
             padding: 20px;
-            
         }
         input, select, button {
             margin: 10px;
@@ -44,41 +43,46 @@
             <option value="%">%</option>
         </select>
         <input type="text" id="right" placeholder="Enter a number">
+        <input type="submit" value="Try me!" id="butt" onclick="calculate()">
+    </div>
 
-        <input type="submit" id="butt" onclick="calculate()">
-    </form>
-    
     <script>
         function calculate() {
             let left = document.getElementById("left").value;
             let operator = document.getElementById("operator").value;
-            let right = document.getElementById("right").value;      
+            let right = document.getElementById("right").value;
             let num1 = parseInt(left);
             let num2 = parseInt(right);
-           if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
+
+
+            if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
                 alert("Error :(");
                 return;
             }
 
-           
+
             if ((operator === "/" || operator === "%") && num2 === 0) {
                 alert("It's over 9000!");
                 return;
             }
 
             let result;
+
+
             switch (operator) {
                 case "+": result = num1 + num2; break;
                 case "-": result = num1 - num2; break;
                 case "*": result = num1 * num2; break;
                 case "/": result = num1 / num2; break;
                 case "%": result = num1 % num2; break;
-                default: result = "Error";
+                default: result = "Error"; break;
             }
+
 
             alert("Result: " + result);
             console.log("Result:", result);
         }
+
 
         setInterval(() => {
             alert("Please, use me...");
