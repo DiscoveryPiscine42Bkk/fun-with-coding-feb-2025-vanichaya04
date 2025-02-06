@@ -53,8 +53,8 @@
                 let left = $("#left").val(); 
                 let operator = $("#operator").val(); 
                 let right = $("#right").val(); 
-                let num1 = parseInt(left);
-                let num2 = parseInt(right);
+                let num1 = parseFloat(left);
+                let num2 = parseFloat(right);
 
                 if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
                     alert("Error :(");
