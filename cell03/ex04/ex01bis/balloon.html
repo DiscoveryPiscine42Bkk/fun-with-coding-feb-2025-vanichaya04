@@ -36,9 +36,8 @@
     <script>
         $(document).ready(function() {
             let colors = ["red", "green", "blue"];
-            
-            let size = localStorage.getItem("balloonSize") ? parseInt(localStorage.getItem("balloonSize")) : 200;
-            let colorIndex = localStorage.getItem("balloonColorIndex") ? parseInt(localStorage.getItem("balloonColorIndex")) : 0;
+            let size = 200;
+            let colorIndex = 0;
 
             function updateBalloon() {
                 $("#balloon").css({
@@ -46,11 +45,7 @@
                     "height": size + "px",
                     "background-color": colors[colorIndex]
                 });
-
-                localStorage.setItem("balloonSize", size);
-                localStorage.setItem("balloonColorIndex", colorIndex);
             }
-
 
             updateBalloon();
 
